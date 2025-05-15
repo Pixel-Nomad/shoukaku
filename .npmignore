@@ -1,6 +1,8 @@
 .github
 .idea
 .vscode
+.eslintignore
+.eslintrc.json
 .gitattributes
 .gitignore
 assets/
@@ -9,7 +11,5 @@ src/
 index.ts
 tsconfig.json
 tsup-config.json
-package-lock.json
-eslint.config.mjs
 **.tgz
 **.md
