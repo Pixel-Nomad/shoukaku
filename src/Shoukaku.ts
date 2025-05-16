@@ -82,10 +82,6 @@ export interface ShoukakuOptions {
      */
 	voiceConnectionTimeout?: number;
 	/**
-	 * Toggle Manual Connection
-	 */
-	ManualConnection?: boolean;
-	/**
      * Node Resolver to use if you want to customize it
      */
 	nodeResolver?: (nodes: Map<string, Node>, connection?: Connection) => Node | undefined;
@@ -191,7 +187,7 @@ export class Shoukaku extends TypedEventEmitter<ShoukakuEvents> {
 		this.connections = new Map();
 		this.players = new Map();
 		this.id = null;
-		this.connector.listen(nodes, this.options.ManualConnection);
+		this.connector.listen(nodes);
 	}
 
 	/**

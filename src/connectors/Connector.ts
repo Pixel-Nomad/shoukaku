@@ -25,7 +25,7 @@ export abstract class Connector {
 		return this;
 	}
 
-	public ready(nodes: NodeOption[]): void {
+	protected ready(nodes: NodeOption[]): void {
 		this.manager!.id = this.getId();
 		for (const node of nodes) this.manager!.addNode(mergeDefault(NodeDefaults, node));
 	}
@@ -45,5 +45,5 @@ export abstract class Connector {
 
 	abstract sendPacket(shardId: number, payload: unknown, important: boolean): void;
 
-	abstract listen(nodes: NodeOption[], ManualConnection: boolean): void;
+	abstract listen(nodes: NodeOption[]): void;
 }

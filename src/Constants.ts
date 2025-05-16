@@ -35,14 +35,13 @@ export const ShoukakuDefaults: Required<ShoukakuOptions> = {
 	reconnectInterval: 5,
 	restTimeout: 60,
 	moveOnDisconnect: false,
-	userAgent: 'Discord Bot/pixieeee (https://github.com/Pixel-Nomad/Shoukaku.git)',
+	userAgent: 'Discord Bot/unknown (https://github.com/shipgirlproject/Shoukaku.git)',
 	structures: {},
 	voiceConnectionTimeout: 15,
-	nodeResolver: (nodes) => [...nodes.values()]
+	nodeResolver: (nodes) => [ ...nodes.values() ]
 		.filter(node => node.state === State.CONNECTED)
 		.sort((a, b) => a.penalties - b.penalties)
-		.shift(),
-	ManualConnection: false,
+		.shift()
 };
 
 export const ShoukakuClientInfo = `${Info.name}/${Info.version} (${Info.repository.url})`;
