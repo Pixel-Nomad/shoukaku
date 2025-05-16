@@ -12,7 +12,7 @@ export class Seyfert extends Connector {
 		return this.client.botId;
 	}
 	// Listen attaches the event listener to the library you are using
-	public listen(nodes: NodeOption[]): void {
+	public listen(nodes: NodeOption[], ManualConnection: boolean): void {
 		this.client.events.values.RAW = {
 			data: { name: 'raw' },
 			run: (packet: any) => {
