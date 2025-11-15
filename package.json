@@ -1,6 +1,6 @@
 {
   "name": "@pixel_nomad/shoukaku",
-  "version": "4.1.5",
+  "version": "4.1.23",
   "description": "A stable and updated wrapper around Lavalink",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
